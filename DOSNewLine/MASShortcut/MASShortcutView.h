@@ -1,4 +1,5 @@
 @class MASShortcut, MASShortcutValidator;
+#import <AppKit/AppKit.h>
 
 extern NSString *const MASShortcutBinding;
 

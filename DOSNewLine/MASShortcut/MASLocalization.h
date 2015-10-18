@@ -10,4 +10,5 @@
  NSLocalizedString throughout the framework, it wouldn’t work
  properly.
 */
+#import <AppKit/AppKit.h>
 NSString *MASLocalizedString(NSString *key, NSString *comment);

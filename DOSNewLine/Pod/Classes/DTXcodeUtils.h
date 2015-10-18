@@ -5,6 +5,7 @@
 @class IDESourceCodeDocument;
 @class IDEEditorContext;
 @class IDEWorkspaceWindowController;
+#import <AppKit/AppKit.h>
 
 @interface DTXcodeUtils : NSObject
 + (NSWindow *)currentWindow;

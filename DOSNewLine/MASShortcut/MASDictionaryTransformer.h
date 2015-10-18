@@ -1,3 +1,4 @@
+#import <AppKit/AppKit.h>
 extern NSString *const MASDictionaryTransformerName;
 
 /**

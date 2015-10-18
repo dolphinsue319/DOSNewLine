@@ -7,9 +7,9 @@
 //
 
 #import "DOSNewLine.h"
-#import <DTXcodeHeaders.h>
-#import <DTXcodeUtils.h>
-#import <MASShortcut/Shortcut.h>
+#import "DTXcodeHeaders.h"
+#import "DTXcodeUtils.h"
+#import "MASShortcut/Shortcut.h"
 #import <Carbon/Carbon.h>
 
 @interface DOSNewLine()
