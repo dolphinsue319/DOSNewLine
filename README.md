@@ -6,3 +6,6 @@ When you press ⌘ + ⇧ + ↵ (command + shift + enter) the end of line will ge
 <h1>Demo</h1>
 ---
 [![Demo CountPages alpha](https://j.gifs.com/mPRqrz.gif)](https://youtu.be/D9NbucdOR5U)
+
+<h1>Install</h1>
+You can install this plug-in using [Alcatraz](http://alcatraz.io). Please search 'DOSNewLine' or 'semicolon' in Alcatraz's window.
