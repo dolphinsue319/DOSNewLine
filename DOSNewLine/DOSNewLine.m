@@ -7,9 +7,12 @@
 //
 
 #import "DOSNewLine.h"
+#import <DTXcodeHeaders.h>
+#import <DTXcodeUtils.h>
+#import <MASShortcut/Shortcut.h>
+#import <Carbon/Carbon.h>
 
 @interface DOSNewLine()
-
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
 @end
 
@@ -25,39 +28,44 @@
     if (self = [super init]) {
         // reference to plugin's bundle, for resource access
         self.bundle = plugin;
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(didApplicationFinishLaunchingNotification:)
-                                                     name:NSApplicationDidFinishLaunchingNotification
-                                                   object:nil];
+        //using shift+command+enter to trigger action
+        MASShortcut *shortcut = [MASShortcut shortcutWithKeyCode:kVK_Return modifierFlags:NSShiftKeyMask|NSCommandKeyMask];
+        [[MASShortcutMonitor sharedMonitor] registerShortcut:shortcut withAction:^{
+            [self doAction];
+        }];
     }
     return self;
 }
 
-- (void)didApplicationFinishLaunchingNotification:(NSNotification*)noti
-{
-    //removeObserver
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSApplicationDidFinishLaunchingNotification object:nil];
-    
-    // Create menu items, initialize UI, etc.
-    // Sample Menu Item:
-    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
-    if (menuItem) {
-        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action" action:@selector(doMenuAction) keyEquivalent:@""];
-        //[actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
-        [actionMenuItem setTarget:self];
-        [[menuItem submenu] addItem:actionMenuItem];
-    }
-}
-
 // Sample Action, for menu item:
-- (void)doMenuAction
+- (void)doAction
 {
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"Hello, World"];
-    [alert runModal];
+    // This is a reference to the current source code editor.
+    DVTSourceTextView *sourceTextView = [DTXcodeUtils currentSourceTextView];
+    NSRange range = [sourceTextView selectedRanges][0].rangeValue;
+    __autoreleasing NSString *contentString = [sourceTextView string];
+    NSRange thisRange = [self findRangeWithNewLine:range targetString:contentString];
+    if (thisRange.location == NSNotFound) {
+        return;
+    }
+    NSString *replaceMent = [NSString stringWithFormat:@";\n"];
+    if ([self isThisSwiftFile]) {
+        replaceMent = [NSString stringWithFormat:@"\n"];
+    }
+    [sourceTextView insertText:replaceMent replacementRange:thisRange];
+    [sourceTextView setSelectedRange:NSMakeRange(thisRange.location+1, 0)];
 }
-
+-(BOOL)isThisSwiftFile{
+    NSString *fileType = [DTXcodeUtils currentSourceCodeDocument].fileType;
+    return [fileType containsString:@"swift"];
+}
+//public.objective-c-source
+-(NSRange)findRangeWithNewLine:(NSRange)beginRange targetString:(NSString *)targetString{
+    NSRange range = [targetString rangeOfCharacterFromSet:[NSCharacterSet newlineCharacterSet]
+                                                  options:NSLiteralSearch
+                                                    range:NSMakeRange(beginRange.location, targetString.length - beginRange.location)];
+    return range;
+}
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

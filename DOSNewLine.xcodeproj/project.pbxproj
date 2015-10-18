@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38623FCFC26EC6717A45D836 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44386C00558E3611CEED17D9 /* libPods.a */; };
+		4A1F2F681BD294B10027BE27 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1F2F671BD294B10027BE27 /* Carbon.framework */; };
 		4AAB6D5D1BD24330008225DB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB6D5C1BD24330008225DB /* AppKit.framework */; settings = {ASSET_TAGS = (); }; };
 		4AAB6D5F1BD24330008225DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB6D5E1BD24330008225DB /* Foundation.framework */; settings = {ASSET_TAGS = (); }; };
 		4AAB6D631BD24330008225DB /* DOSNewLine.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 4AAB6D621BD24330008225DB /* DOSNewLine.xcscheme */; };
@@ -15,6 +17,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		431800BA0416C12BD6ED68E3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		44386C00558E3611CEED17D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A1BC7C21BD27A790054B590 /* NewLine2.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = NewLine2.xcscheme; path = NewLine2.xcodeproj/xcshareddata/xcschemes/NewLine2.xcscheme; sourceTree = SOURCE_ROOT; };
+		4A1BC7C41BD27A790054B590 /* NewLine2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewLine2.h; sourceTree = "<group>"; };
+		4A1BC7C51BD27A790054B590 /* NewLine2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewLine2.m; sourceTree = "<group>"; };
+		4A1BC7C71BD27A790054B590 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		4A1BC7C81BD27A790054B590 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		4A1BC7CA1BD27A790054B590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A1F2F671BD294B10027BE27 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		4AAB6D591BD24330008225DB /* DOSNewLine.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOSNewLine.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAB6D5C1BD24330008225DB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		4AAB6D5E1BD24330008225DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -24,6 +35,7 @@
 		4AAB6D671BD24330008225DB /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
 		4AAB6D681BD24330008225DB /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
 		4AAB6D6A1BD24330008225DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9843D16309E0FE7F5B50514 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,20 +43,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1F2F681BD294B10027BE27 /* Carbon.framework in Frameworks */,
 				4AAB6D5D1BD24330008225DB /* AppKit.framework in Frameworks */,
 				4AAB6D5F1BD24330008225DB /* Foundation.framework in Frameworks */,
+				38623FCFC26EC6717A45D836 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A1BC7C01BD27A790054B590 /* NewLine2 */ = {
+			isa = PBXGroup;
+			children = (
+				4A1BC7C41BD27A790054B590 /* NewLine2.h */,
+				4A1BC7C51BD27A790054B590 /* NewLine2.m */,
+				4A1BC7C71BD27A790054B590 /* NSObject_Extension.h */,
+				4A1BC7C81BD27A790054B590 /* NSObject_Extension.m */,
+				4A1BC7CA1BD27A790054B590 /* Info.plist */,
+				4A1BC7C11BD27A790054B590 /* Supporting Files */,
+			);
+			path = NewLine2;
+			sourceTree = "<group>";
+		};
+		4A1BC7C11BD27A790054B590 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A1BC7C21BD27A790054B590 /* NewLine2.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4AAB6D501BD24330008225DB = {
 			isa = PBXGroup;
 			children = (
 				4AAB6D601BD24330008225DB /* DOSNewLine */,
+				4A1BC7C01BD27A790054B590 /* NewLine2 */,
 				4AAB6D5B1BD24330008225DB /* Frameworks */,
 				4AAB6D5A1BD24330008225DB /* Products */,
+				F619A9E5D60560810AF2D9BE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,8 +96,10 @@
 		4AAB6D5B1BD24330008225DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A1F2F671BD294B10027BE27 /* Carbon.framework */,
 				4AAB6D5C1BD24330008225DB /* AppKit.framework */,
 				4AAB6D5E1BD24330008225DB /* Foundation.framework */,
+				44386C00558E3611CEED17D9 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,6 +125,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F619A9E5D60560810AF2D9BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				431800BA0416C12BD6ED68E3 /* Pods.debug.xcconfig */,
+				E9843D16309E0FE7F5B50514 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AAB6D6D1BD24330008225DB /* Build configuration list for PBXNativeTarget "DOSNewLine" */;
 			buildPhases = (
+				777B8D2B5A26547F720A5D85 /* Check Pods Manifest.lock */,
 				4AAB6D551BD24330008225DB /* Sources */,
 				4AAB6D561BD24330008225DB /* Resources */,
 				4AAB6D571BD24330008225DB /* Frameworks */,
+				C5297F6D3476D5577D875D5A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -112,6 +162,7 @@
 		4AAB6D511BD24330008225DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Dolphin;
 				TargetAttributes = {
@@ -147,6 +198,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		777B8D2B5A26547F720A5D85 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5297F6D3476D5577D875D5A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4AAB6D551BD24330008225DB /* Sources */ = {
@@ -236,27 +320,34 @@
 		};
 		4AAB6D6E1BD24330008225DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 431800BA0416C12BD6ED68E3 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
 				INFOPLIST_FILE = DOSNewLine/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = idv.dolphin.DOSNewLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Debug;
 		};
 		4AAB6D6F1BD24330008225DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9843D16309E0FE7F5B50514 /* Pods.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
 				INFOPLIST_FILE = DOSNewLine/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = idv.dolphin.DOSNewLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,6 +374,7 @@
 				4AAB6D6F1BD24330008225DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
