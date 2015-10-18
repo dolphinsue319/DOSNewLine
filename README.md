@@ -1,0 +1,2 @@
+This is a Xcode plugin. When you hit ⌘ + ⇧ + ↵ (command + shift + enter) the end of line will generate a semicolon automatically, and the cursor will move to the end of current line. If you are editing a swift file, the semicolon won't be generate, and the cursor still move to the end of current line.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D9NbucdOR5U" frameborder="0" allowfullscreen></iframe>

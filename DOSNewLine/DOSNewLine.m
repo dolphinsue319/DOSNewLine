@@ -37,7 +37,6 @@
     return self;
 }
 
-// Sample Action, for menu item:
 - (void)doAction
 {
     // This is a reference to the current source code editor.
@@ -52,14 +51,19 @@
     if ([self isThisSwiftFile]) {
         replaceMent = [NSString stringWithFormat:@"\n"];
     }
+    [NSString stringWithFormat:@"yes!"];
+    [NSString stringWithFormat:@"OK!"];
     [sourceTextView insertText:replaceMent replacementRange:thisRange];
-    [sourceTextView setSelectedRange:NSMakeRange(thisRange.location+1, 0)];
+    NSInteger moveToRangeLocation = 1;
+    if ([self isThisSwiftFile]) {
+        moveToRangeLocation = 0;
+    }
+    [sourceTextView setSelectedRange:NSMakeRange(thisRange.location + moveToRangeLocation, 0)];
 }
 -(BOOL)isThisSwiftFile{
     NSString *fileType = [DTXcodeUtils currentSourceCodeDocument].fileType;
     return [fileType containsString:@"swift"];
 }
-//public.objective-c-source
 -(NSRange)findRangeWithNewLine:(NSRange)beginRange targetString:(NSString *)targetString{
     NSRange range = [targetString rangeOfCharacterFromSet:[NSCharacterSet newlineCharacterSet]
                                                   options:NSLiteralSearch
