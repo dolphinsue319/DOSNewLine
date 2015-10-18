@@ -43,17 +43,18 @@
     DVTSourceTextView *sourceTextView = [DTXcodeUtils currentSourceTextView];
     NSRange range = [sourceTextView selectedRanges][0].rangeValue;
     __autoreleasing NSString *contentString = [sourceTextView string];
+    //find end of current line position
     NSRange thisRange = [self findRangeWithNewLine:range targetString:contentString];
     if (thisRange.location == NSNotFound) {
         return;
     }
+    //replace with ;
     NSString *replaceMent = [NSString stringWithFormat:@";\n"];
     if ([self isThisSwiftFile]) {
         replaceMent = [NSString stringWithFormat:@"\n"];
     }
-    [NSString stringWithFormat:@"yes!"];
-    [NSString stringWithFormat:@"OK!"];
     [sourceTextView insertText:replaceMent replacementRange:thisRange];
+    //move cursor
     NSInteger moveToRangeLocation = 1;
     if ([self isThisSwiftFile]) {
         moveToRangeLocation = 0;
