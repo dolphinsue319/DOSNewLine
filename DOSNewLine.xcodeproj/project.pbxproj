@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4A1F2F681BD294B10027BE27 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1F2F671BD294B10027BE27 /* Carbon.framework */; };
-		4A5A1A591BD392DA009ABE84 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 4A5A1A541BD392DA009ABE84 /* .gitkeep */; settings = {ASSET_TAGS = (); }; };
-		4A5A1A5A1BD392DA009ABE84 /* DTXcodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A1A561BD392DA009ABE84 /* DTXcodeUtils.m */; settings = {ASSET_TAGS = (); }; };
-		4A6EB23A1BD398D300A25534 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A6EB21E1BD398D300A25534 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		4A6EB23B1BD398D300A25534 /* MASDictionaryTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2201BD398D300A25534 /* MASDictionaryTransformer.m */; settings = {ASSET_TAGS = (); }; };
-		4A6EB23D1BD398D300A25534 /* MASHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2231BD398D300A25534 /* MASHotKey.m */; settings = {ASSET_TAGS = (); }; };
-		4A6EB23F1BD398D300A25534 /* MASLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2271BD398D300A25534 /* MASLocalization.m */; settings = {ASSET_TAGS = (); }; };
-		4A6EB2401BD398D300A25534 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2291BD398D300A25534 /* MASShortcut.m */; settings = {ASSET_TAGS = (); }; };
-		4A6EB2411BD398D300A25534 /* MASShortcutBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB22C1BD398D300A25534 /* MASShortcutBinder.m */; settings = {ASSET_TAGS = (); }; };
-		4A6EB2431BD398D300A25534 /* MASShortcutMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB22F1BD398D300A25534 /* MASShortcutMonitor.m */; settings = {ASSET_TAGS = (); }; };
-		4A6EB2461BD398D300A25534 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2331BD398D300A25534 /* MASShortcutValidator.m */; settings = {ASSET_TAGS = (); }; };
-		4A6EB2471BD398D300A25534 /* MASShortcutView+Bindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2351BD398D300A25534 /* MASShortcutView+Bindings.m */; settings = {ASSET_TAGS = (); }; };
-		4A6EB2481BD398D300A25534 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2371BD398D300A25534 /* MASShortcutView.m */; settings = {ASSET_TAGS = (); }; };
-		4AAB6D5D1BD24330008225DB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB6D5C1BD24330008225DB /* AppKit.framework */; settings = {ASSET_TAGS = (); }; };
-		4AAB6D5F1BD24330008225DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB6D5E1BD24330008225DB /* Foundation.framework */; settings = {ASSET_TAGS = (); }; };
+		4A5A1A591BD392DA009ABE84 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 4A5A1A541BD392DA009ABE84 /* .gitkeep */; };
+		4A5A1A5A1BD392DA009ABE84 /* DTXcodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A1A561BD392DA009ABE84 /* DTXcodeUtils.m */; };
+		4A6EB23A1BD398D300A25534 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A6EB21E1BD398D300A25534 /* Info.plist */; };
+		4A6EB23B1BD398D300A25534 /* MASDictionaryTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2201BD398D300A25534 /* MASDictionaryTransformer.m */; };
+		4A6EB23D1BD398D300A25534 /* MASHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2231BD398D300A25534 /* MASHotKey.m */; };
+		4A6EB23F1BD398D300A25534 /* MASLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2271BD398D300A25534 /* MASLocalization.m */; };
+		4A6EB2401BD398D300A25534 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2291BD398D300A25534 /* MASShortcut.m */; };
+		4A6EB2411BD398D300A25534 /* MASShortcutBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB22C1BD398D300A25534 /* MASShortcutBinder.m */; };
+		4A6EB2431BD398D300A25534 /* MASShortcutMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB22F1BD398D300A25534 /* MASShortcutMonitor.m */; };
+		4A6EB2461BD398D300A25534 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2331BD398D300A25534 /* MASShortcutValidator.m */; };
+		4A6EB2471BD398D300A25534 /* MASShortcutView+Bindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2351BD398D300A25534 /* MASShortcutView+Bindings.m */; };
+		4A6EB2481BD398D300A25534 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6EB2371BD398D300A25534 /* MASShortcutView.m */; };
+		4AAB6D5D1BD24330008225DB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB6D5C1BD24330008225DB /* AppKit.framework */; };
+		4AAB6D5F1BD24330008225DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAB6D5E1BD24330008225DB /* Foundation.framework */; };
 		4AAB6D631BD24330008225DB /* DOSNewLine.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 4AAB6D621BD24330008225DB /* DOSNewLine.xcscheme */; };
 		4AAB6D661BD24330008225DB /* DOSNewLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB6D651BD24330008225DB /* DOSNewLine.m */; };
 		4AAB6D691BD24330008225DB /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAB6D681BD24330008225DB /* NSObject_Extension.m */; };
